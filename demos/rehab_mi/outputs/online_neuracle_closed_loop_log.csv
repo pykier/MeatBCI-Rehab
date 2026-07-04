@@ -1,0 +1,5 @@
+time,trial,marker,event,target_label,pred_label,control_label,correct,inference_ms,prediction_delay_s,robot_command,fes_command,vr_command
+2026-07-02T19:45:45,1,2,right_hand,right_hand,right_hand,right_hand,True,5.931199999999137,1.0940000000009604,robot:right_hand:COM3:queued,fes:right_hand:pulse_train:disabled,vr:right_hand:feedback
+2026-07-02T19:46:05,2,1,left_hand,left_hand,right_hand,right_hand,False,3.9956000000032077,1.0620000000017171,robot:right_hand:COM3:queued,fes:right_hand:pulse_train:disabled,vr:right_hand:feedback
+2026-07-02T19:46:24,3,1,left_hand,left_hand,left_hand,left_hand,True,4.06560000000411,1.0929999999971187,robot:left_hand:COM4:queued,fes:left_hand:pulse_train:disabled,vr:left_hand:feedback
+2026-07-02T19:46:43,4,2,right_hand,right_hand,right_hand,right_hand,True,3.5601000000013983,1.0929999999971187,robot:right_hand:COM3:queued,fes:right_hand:pulse_train:disabled,vr:right_hand:feedback

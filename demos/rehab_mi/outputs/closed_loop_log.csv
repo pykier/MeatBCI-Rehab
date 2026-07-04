@@ -1,0 +1,5 @@
+time,trial,subject,event,true_label,pred_label,control_label,correct,robot_command,fes_command,mr_command
+2026-06-07T20:01:38,1,1,left_hand,left_hand,left_hand,left_hand,True,robot:left_hand:COM4:sent,fes:left_hand:pulse_train:simulated,mr_scene:left_hand:highlight_motion
+2026-06-07T20:01:46,2,1,right_hand,right_hand,left_hand,left_hand,False,robot:left_hand:COM4:sent,fes:left_hand:pulse_train:simulated,mr_scene:left_hand:highlight_motion
+2026-06-07T20:01:53,3,1,left_hand,left_hand,left_hand,left_hand,True,robot:left_hand:COM4:sent,fes:left_hand:pulse_train:simulated,mr_scene:left_hand:highlight_motion
+2026-06-07T20:02:01,4,1,right_hand,right_hand,left_hand,left_hand,False,robot:left_hand:COM4:sent,fes:left_hand:pulse_train:simulated,mr_scene:left_hand:highlight_motion

@@ -1,0 +1,34 @@
+{
+  "subject": "sub01",
+  "session": "formal01",
+  "training_sessions": [
+    "formal01",
+    "formal02"
+  ],
+  "data_root": "my_data/rehab_mi_software_marker",
+  "model_root": "my_data/rehab_mi_models",
+  "selected_model": "sub01_all_sessions_eegnet.pkl",
+  "srate": 250,
+  "num_chans": 17,
+  "eeg_chans": 16,
+  "channels": [
+    "EEG01",
+    "EEG02",
+    "EEG03",
+    "EEG04",
+    "EEG05",
+    "EEG06",
+    "EEG07",
+    "EEG08",
+    "EEG09",
+    "EEG10",
+    "EEG11",
+    "EEG12",
+    "EEG13",
+    "EEG14",
+    "EEG15",
+    "EEG16"
+  ],
+  "tmin": 1.0,
+  "tmax": 4.0
+}

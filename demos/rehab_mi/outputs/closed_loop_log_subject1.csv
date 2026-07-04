@@ -1,0 +1,13 @@
+time,trial,subject,event,true_label,pred_label,correct,robot_command,fes_command,mr_command
+2026-06-06T21:33:38,1,1,left_hand,left_hand,left_hand,True,robot:left_hand:grasp_release,fes:left_hand:pulse_train:simulated,mr_scene:left_hand:highlight_motion
+2026-06-06T21:33:38,2,1,right_hand,right_hand,right_hand,True,robot:right_hand:grasp_release,fes:right_hand:pulse_train:simulated,mr_scene:right_hand:highlight_motion
+2026-06-06T21:33:38,3,1,left_hand,left_hand,left_hand,True,robot:left_hand:grasp_release,fes:left_hand:pulse_train:simulated,mr_scene:left_hand:highlight_motion
+2026-06-06T21:33:38,4,1,right_hand,right_hand,right_hand,True,robot:right_hand:grasp_release,fes:right_hand:pulse_train:simulated,mr_scene:right_hand:highlight_motion
+2026-06-06T21:33:38,5,1,left_hand,left_hand,left_hand,True,robot:left_hand:grasp_release,fes:left_hand:pulse_train:simulated,mr_scene:left_hand:highlight_motion
+2026-06-06T21:33:38,6,1,right_hand,right_hand,right_hand,True,robot:right_hand:grasp_release,fes:right_hand:pulse_train:simulated,mr_scene:right_hand:highlight_motion
+2026-06-06T21:33:38,7,1,left_hand,left_hand,left_hand,True,robot:left_hand:grasp_release,fes:left_hand:pulse_train:simulated,mr_scene:left_hand:highlight_motion
+2026-06-06T21:33:38,8,1,right_hand,right_hand,right_hand,True,robot:right_hand:grasp_release,fes:right_hand:pulse_train:simulated,mr_scene:right_hand:highlight_motion
+2026-06-06T21:33:38,9,1,left_hand,left_hand,left_hand,True,robot:left_hand:grasp_release,fes:left_hand:pulse_train:simulated,mr_scene:left_hand:highlight_motion
+2026-06-06T21:33:38,10,1,right_hand,right_hand,left_hand,False,robot:left_hand:grasp_release,fes:left_hand:pulse_train:simulated,mr_scene:left_hand:highlight_motion
+2026-06-06T21:33:38,11,1,left_hand,left_hand,right_hand,False,robot:right_hand:grasp_release,fes:right_hand:pulse_train:simulated,mr_scene:right_hand:highlight_motion
+2026-06-06T21:33:38,12,1,right_hand,right_hand,right_hand,True,robot:right_hand:grasp_release,fes:right_hand:pulse_train:simulated,mr_scene:right_hand:highlight_motion

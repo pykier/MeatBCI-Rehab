@@ -1,0 +1,11 @@
+time,trial,target,trigger,feedback,feedback_mode
+2026-07-02T19:54:56,1,right,2,right,target
+2026-07-02T19:55:15,2,left,1,left,target
+2026-07-02T19:55:35,3,right,2,right,target
+2026-07-02T19:55:54,4,right,2,right,target
+2026-07-02T19:56:13,5,left,1,left,target
+2026-07-02T19:56:32,6,left,1,left,target
+2026-07-02T19:56:51,7,left,1,left,target
+2026-07-02T19:57:10,8,right,2,right,target
+2026-07-02T19:57:30,9,left,1,left,target
+2026-07-02T19:57:49,10,right,2,right,target
