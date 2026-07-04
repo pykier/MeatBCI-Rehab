@@ -155,7 +155,7 @@ python demos\rehab_mi\run_online_demo.py `
 | `brainstim` | RehabMI state machine, PsychoPy stimulus, LSL marker, browser VR/MR Renderer |
 | `brainflow` | Neuracle DataService, software marker alignment, online worker, rolling buffer, robot/FES feedback |
 | New large-scale functions | VR/MR rehabilitation scene; EEG online prediction to robot-hand closed loop |
-| New dataset | Needs at least 15 anonymized subjects for full dataset score |
+| New dataset | Needs at least 17 anonymized subjects for full dataset score |
 | New paradigm/algorithm/device | RehabMI paradigm; FBMSNet/FBCSPSVM/FBCSPSVMRM; robot hand and FES interfaces |
 | Improved functions | TCP reading robustness, marker deduplication, automatic crop/stop, fault-tolerant robot feedback |
 | Usage degree | Demos are launchers; data, stimulus, online processing and devices are implemented under `metabci` |
