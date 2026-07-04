@@ -9,6 +9,9 @@
 其中 `demos/rehab_mi` 是比赛演示入口，核心能力在
 `metabci.brainda`、`metabci.brainstim` 和 `metabci.brainflow`。MetaBCI 平台的独立系统。
 
+声明：本项目是依托于MetaBCI官方框架建立的项目，官方地址为：https://github.com/TBC-TJU/MetaBCI
+该平台为天津大学建设的脑机接口实验平台，详细介绍见官网链接
+
 ## 1. Directory Overview
 
 ```text
