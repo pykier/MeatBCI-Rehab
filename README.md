@@ -37,14 +37,14 @@ metabci/brainflow/feedback.py
 
 
 ----------------------------------------重点快速理解-----------------------------------------------------------------------------------------------------
-
+由于比赛需要测试，直接基于我们已经离线采集好的数据sub17，直接进行第六步 离线训练就行
 
 本实验的主要流程为离线采集session1的数据、再次离线采集session2的数据、切分epoch、挑选某个模型离线训练、在线VR控制机械手
 
 首先离线采集session1（分为两个终端分别执行）
 终端1
 .venv\Scripts\python.exe demos\rehab_mi\collect_dataset.py `
-  --subject sub05 `
+  --subject sub17 `
   --session formal01 `
   --srate 250 `
   --num-chans 17
@@ -65,7 +65,7 @@ metabci/brainflow/feedback.py
 再次离线采集session2
 终端1
 .venv\Scripts\python.exe demos\rehab_mi\collect_dataset.py `
-  --subject sub05 `
+  --subject sub17 `
   --session formal02 `
   --srate 250 `
   --num-chans 17
@@ -83,17 +83,17 @@ metabci/brainflow/feedback.py
 ---------------------------------
 切分epoch
 python demos\rehab_mi\epoch_subject_sessions.py `
-  --subject sub05 `
+  --subject sub17 `
   --sessions formal01 formal02 `
   --overwrite
 -----------------------------------
 
 
 
-挑选某个模型离线训练（举例三个模型）
+六、  挑选某个模型离线训练（举例三个模型）
 
 python demos\rehab_mi\train_model.py `
-  --subject sub05 `
+  --subject sub17 `
   --sessions formal01 formal02 `
   --algorithm eegnet `
   --epochs 30 `
@@ -101,29 +101,29 @@ python demos\rehab_mi\train_model.py `
   --batch-size 32 `
   --learning-rate 0.01 `
   --dropout 0.3 `
-  --out my_data\rehab_mi_models\sub05\sub05_all_sessions_eegnet.pkl
+  --out my_data\rehab_mi_models\sub17\sub17_all_sessions_eegnet.pkl
 
 python demos\rehab_mi\train_model.py `
-  --subject sub05 `
+  --subject sub17 `
   --sessions formal01 formal02 `
   --algorithm svc `
-  --out my_data\rehab_mi_models\sub05\sub05_all_sessions_svc.pkl
+  --out my_data\rehab_mi_models\sub017\sub17_all_sessions_svc.pkl
 
 
 .\.venv\Scripts\python.exe demos\rehab_mi\train_model.py `
-  --subject sub05 `
+  --subject sub17 `
   --sessions formal01 formal02 `
   --algorithm fbcspsvm `
-  --out my_data\rehab_mi_models\sub05\sub05_all_sessions_fbcspsvm.pkl
+  --out my_data\rehab_mi_models\sub17\sub17_all_sessions_fbcspsvm.pkl
 -----------------------------------------
 
 
 
-在线VR控制机械手
+七、 在线VR控制机械手
 
 python demos\rehab_mi\run_online_demo.py `
   --vr `
-  --model my_data\rehab_mi_models\sub05\sub05_all_sessions_eegnet.pkl `
+  --model my_data\rehab_mi_models\sub17\sub17_all_sessions_eegnet.pkl `
   --control-source prediction `
   --robot-mode serial `
   --robot-side both `
@@ -135,7 +135,7 @@ python demos\rehab_mi\run_online_demo.py `
   --nrep 5
 
 
-其中换被试就更改sub05   换算法就改算法名字，svc之类的 以及对应的模型地址加载也要跟着换  formal01和formal02指的是两个session
+其中换被试就更改sub17   换算法就改算法名字，svc之类的 以及对应的模型地址加载也要跟着换  formal01和formal02指的是两个session
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
