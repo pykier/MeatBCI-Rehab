@@ -1,6 +1,6 @@
-# MetaBCI Demos And Rehabilitation MI Competition Workflow
+<img width="865" height="529" alt="image" src="https://github.com/user-attachments/assets/d61d9a47-b62d-4d79-88d4-980e54b2aac2" /># MetaBCI Demos And Rehabilitation MI Competition Workflow
 
-本目录包含 MetaBCI 官方示例和本项目新增的康复运动想象闭环demos。
+本目录包含 MetaBCI 官方示例和本项目新增的康复运动想象系统。
 
 本项目是：
 
@@ -37,6 +37,7 @@ metabci/brainflow/neuracle.py
 metabci/brainflow/rehab.py
 metabci/brainflow/feedback.py
 ```
+<img width="865" height="529" alt="image" src="https://github.com/user-attachments/assets/5574d7e0-3ed6-4075-9ee3-ee2f5d60b185" />
 
 
 ----------------------------------------重点快速理解-----------------------------------------------------------------------------------------------------
