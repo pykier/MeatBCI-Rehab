@@ -1,9 +1,9 @@
-# 念力搬砖BCI赛队作品测试说明
+# HolyMoly-2026产业联盟赛队作品测试说明
 
 项目名称：基于虚拟现实的运动康复机械手控制系统  
-项目仓库：[https://github.com/pykier/MeatBCI-Rehab](https://github.com/pykier/MeatBCI-Rehab)
 
-本说明面向 MetaBCI 创新应用开发赛项代码测试。仓库中的 `demos/rehab_mi` 是完整演示入口，`metabci/` 下包含本项目对 MetaBCI 三个子平台的新增、修复和封装能力。
+
+本说明面向无创非侵入式脑机接口应用创新赛项。仓库中的 `demos/rehab_mi` 是完整演示入口，
 
 
 
@@ -17,18 +17,18 @@
 
 ## 1. 项目功能概述
 
-本项目基于 MetaBCI 平台实现运动想象（Motor Imagery, MI）二分类闭环康复系统。系统支持左右手运动想象刺激、Neuracle 脑电采集、1-4 s 运动想象 EEG 时间窗切片、多算法离线训练、在线实时预测、VR/MR 场景同步显示和左右康复机械手反馈。
+本项目基于运动想象（Motor Imagery, MI）实现二分类闭环康复系统。系统支持左右手运动想象刺激、Neuracle 脑电采集、1-4 s 运动想象 EEG 时间窗切片、多算法离线训练、在线实时预测、VR/MR 场景同步显示和左右康复机械手反馈。
 
 整体链路如下：
 
 ```text
-brainstim 康复 MI 范式 / VR 场景
+康复 MI 范式 / VR 场景
         ↓  LSL marker / phase event
-brainflow Neuracle 数据接入 / marker 同步 / 在线切片
+Neuracle 数据接入 / marker 同步 / 在线切片
         ↓  1-4 s MI epoch
-brainda EEGNet / SECNet / FBMSNet / FBCSP 等算法预测
+EEGNet / SECNet / FBMSNet / FBCSP 等算法预测
         ↓  left_hand / right_hand
-brainflow 机械手反馈 / VR 反馈 / sim 模式日志输出
+机械手反馈 / VR 反馈 / sim 模式日志输出
 ```
 
 核心特点：
@@ -38,19 +38,8 @@ brainflow 机械手反馈 / VR 反馈 / sim 模式日志输出
 - 支持无硬件测试：使用 `sub17` 验证数据训练模型，并使用 `--robot-mode sim` 验证在线流程。
 - 支持多算法离线训练：`eegnet`、`secnet`、`fbmsnet`、`ifnet`、`mfanet`、`fbcspsvm`、`fbcspsvmrm`。
 
-## 2. MetaBCI 平台使用与评分映射
 
-本项目是在 MetaBCI 三个子平台基础上扩展康复 MI 场景。`demos/rehab_mi` 仅作为案例入口，核心复用和扩展功能位于 `metabci/`。
 
-| 评分项 | MetaBCI 子平台 | 本项目功能 | 主要代码路径 |
-|---|---|---|---|
-| 使用 brainda | Brainda | RehabMI 数据集、MotorImagery 范式切片、多算法训练和模型保存 | `metabci/brainda/datasets/rehab_mi.py`、`metabci/brainda/paradigms/imagery.py`、`metabci/brainda/algorithms/` |
-| 使用 brainstim | Brainstim | 康复 MI 状态机、PsychoPy 刺激、LSL marker、VR/MR 场景事件同步 | `metabci/brainstim/rehab_mi.py`、`metabci/brainstim/vr.py`、`demos/rehab_mi/rehab_stim_demo.py` |
-| 使用 brainflow | Brainflow | Neuracle DataService 接入、软件 marker 同步、在线切片、机械手反馈、sim 模式 | `metabci/brainflow/neuracle.py`、`metabci/brainflow/feedback.py`、`demos/rehab_mi/online_neuracle_closed_loop.py` |
-| 新增大规模功能 | 三个平台协同 | VR/MR 康复场景 + EEG 在线预测 + 机械手闭环控制 | `demos/rehab_mi/run_online_demo.py` |
-| 新增数据集 | Brainda | RehabMI 数据集，支持 subject/session 结构和 MetaBCI 加载 | `my_data/rehab_mi_software_marker/`、`metabci/brainda/datasets/rehab_mi.py` |
-| 新增范式/算法/设备 | Brainstim/Brainda/Brainflow | RehabMI 范式、SECNet/FBMSNet/IFNet/MFANet/FBCSPSVMRM、机械手和 VR 反馈接口 | `metabci/brainstim/rehab_mi.py`、`metabci/brainda/algorithms/`、`metabci/brainflow/feedback.py` |
-| 修复/优化 | 三个平台协同 | marker 去重、Neuracle 断连容错、串口反馈容错、深度模型在线 float32 输入统一 | `metabci/brainflow/neuracle.py`、`metabci/brainflow/feedback.py`、`metabci/brainda/algorithms/rehab.py` |
 
 ## 3. 代码目录结构
 
@@ -82,7 +71,7 @@ demos/
     assets/                              # 刺激图片、机械手图片等资源
 
 my_data/
-  rehab_mi_software_marker/sub17/        # 用于赛事测试的 sub17 数据
+  rehab_mi_software_marker/sub17/        # 用于赛事检验的 sub17 数据
   rehab_mi_models/sub17/                 # sub17 对应模型或测试输出
 
 docs/
@@ -93,7 +82,7 @@ docs/
 
 推荐系统：Windows 10/11  
 推荐 Python：3.9  
-推荐执行目录：仓库根目录，即包含 `metabci/`、`demos/`、`requirements.txt` 的目录。
+推荐执行目录：仓库根目录
 
 ### 4.1 创建环境
 
@@ -254,8 +243,7 @@ python demos\rehab_mi\run_online_demo.py `
 | EEG 采样率 | `250 Hz` |
 | 数据通道 | `--num-chans 17`，其中 16 EEG + 1 marker |
 | EEG 通道数 | `--eeg-chans 16` |
-| 左手机械手 | `COM4` |
-| 右手机械手 | `COM3` |
+
 | VR 网页端口 | `8766` |
 | VR 事件端口 | `8765` |
 
