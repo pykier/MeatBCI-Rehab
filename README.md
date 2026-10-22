@@ -9,7 +9,7 @@
 
 评测人员如果没有 VR 眼镜、Neuracle 脑电帽和机械手，也可以使用仓库中提供的 `sub17` 验证数据和 `sim` 模式完成离线训练、模型指标验证和无硬件在线流程演示。
 
-<img width="865" height="529" alt="image" src="https://github.com/user-attachments/assets/4d4fc3a2-dba2-44f6-a207-dd6724369dc3" />
+
 
 <img width="865" height="445" alt="image" src="https://github.com/user-attachments/assets/aed57c6a-6760-42ee-a41e-fb92c49757d3" />
 <img width="542" height="359" alt="image" src="https://github.com/user-attachments/assets/c21e1d26-e205-4990-9be6-6f42c32f10c5" />
